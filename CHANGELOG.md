@@ -1,6 +1,8 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.6] - 2020-09-21
+
 ## [0.1.5] - 2020-09-21
 
 ## [0.1.4] - 2020-09-21
@@ -13,3 +15,6 @@ All notable changes to this project will be documented in this file.
 
 
 [0.1.3]: https://github.com/vinceg/vue-click-away/releases/tag/v0.1.3
+[0.1.4]: https://github.com/vinceg/vue-click-away/releases/tag/v0.1.4
+[0.1.5]: https://github.com/vinceg/vue-click-away/releases/tag/v0.1.5
+[0.1.6]: https://github.com/vinceg/vue-click-away/releases/tag/v0.1.6

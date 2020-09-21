@@ -3,6 +3,10 @@
 > Vue 3.0 Compatible Click Away Directive
 
 [![npm version](https://img.shields.io/npm/v/vue3-click-away.svg)](https://www.npmjs.com/package/vue3-click-away)
+![GitHub issues](https://img.shields.io/github/issues/vinceg/vue-click-away)
+![NPM](https://img.shields.io/npm/l/vue3-click-away)
+![GitHub contributors](https://img.shields.io/github/contributors/vinceg/vue-click-away)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/vinceg/vue-click-away)
 
 ## Overview
 
@@ -26,9 +30,7 @@ yarn add vue3-click-away
 
 ## Usage
 
-:::tip
-By default the module exports a directive, you can also use this as a mixin which is documented below.
-:::
+> By default the module exports a directive, you can also use this as a mixin which is documented below.
 
 ```html
 <template>
