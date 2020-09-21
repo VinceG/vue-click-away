@@ -11,13 +11,13 @@ Detect if a click event happened outside of an element. Compatible with Vue 3.x.
 ## Installation
 
 ```
-npm i vue-click-away
+npm i vue3-click-away
 ```
 
 <p></p>
 
 ```
-yarn add vue-click-away
+yarn add vue3-click-away
 ```
 
 ## Usage

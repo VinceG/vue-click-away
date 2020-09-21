@@ -17,13 +17,4 @@ module.exports = {
     nav: [],
     sidebar: "auto",
   },
-  configureWebpack: {
-    resolve: {
-      modules: [path.resolve(__dirname, "../../dist")],
-      alias: {
-        "@": path.resolve(__dirname),
-        dist: path.resolve(__dirname, "../../dist"),
-      },
-    },
-  },
 };
