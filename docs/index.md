@@ -4,7 +4,6 @@
 
 Detect if a click event happened outside of an element. Compatible with Vue 3.x.
 
-
 ## Requirements
 
 - Vue 3.x
@@ -38,10 +37,10 @@ By default the module exports a directive, you can also use this as a mixin whic
 <p></p>
 
 ```js
-import VueClickAway from "vue-click-away";
+import VueClickAway from "vue3-click-away";
 export default {
   directives: {
-    ClickAway: VueClickAway
+    ClickAway: VueClickAway,
   },
   methods: {
     onClickAway(event) {
@@ -64,7 +63,7 @@ export default {
 <p></p>
 
 ```js
-import { mixin as VueClickAway } from "vue-click-away";
+import { mixin as VueClickAway } from "vue3-click-away";
 export default {
   mixins: [VueClickAway],
   methods: {
