@@ -2,29 +2,38 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const handleClickOutside = (el, binding, vnode, event) => {
+const clickEventType = document.ontouchstart !== null ? "click" : "touchstart";
+
+const UNIQUE_ID = "__vue_click_away__";
+
+const onMounted = (el, binding, vnode) => {
+  onUnmounted(el);
+
   let vm = vnode.context;
   let callback = binding.value;
 
-  if (
-    (!el || !el.contains(event.target)) &&
-    callback &&
-    typeof callback === "function"
-  ) {
-    return callback.call(vm, event);
-  }
+  let nextTick = false;
+  setTimeout(function () {
+    nextTick = true;
+  }, 0);
+
+  el[UNIQUE_ID] = (event) => {
+    if (
+      (!el || !el.contains(event.target)) &&
+      callback &&
+      nextTick &&
+      typeof callback === "function"
+    ) {
+      return callback.call(vm, event);
+    }
+  };
+
+  document.addEventListener(clickEventType, el[UNIQUE_ID], false);
 };
 
-const onMounted = (el, binding, vnode) => {
-  document.addEventListener(
-    "click",
-    (event) => handleClickOutside(el, binding, vnode, event),
-    true
-  );
-};
-
-const onUnmounted = () => {
-  document.removeEventListener("click", handleClickOutside, true);
+const onUnmounted = (el) => {
+  document.removeEventListener(clickEventType, el[UNIQUE_ID], false);
+  delete el[UNIQUE_ID];
 };
 
 const onUpdated = (el, binding) => {

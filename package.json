@@ -34,9 +34,8 @@
   "homepage": "https://github.com/VinceG/vue-click-away#readme",
   "devDependencies": {
     "rollup": "^2.27.1",
-    "rollup-plugin-terser": "^7.0.2",
-    "vitepress": "^0.6.0",
-    "vue3-click-away": "^0.1.2"
+    "rollup-plugin-copy": "^3.3.0",
+    "vitepress": "^0.6.0"
   },
   "dependencies": {}
 }

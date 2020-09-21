@@ -1,4 +1,5 @@
 import pkg from "./package.json";
+import copy from "rollup-plugin-copy";
 
 export default [
   {
@@ -15,6 +16,11 @@ export default [
         format: "es",
         sourcemap: true,
       },
+    ],
+    plugins: [
+      copy({
+        targets: [{ src: "dist/module.js", dest: "docs/.vitepress" }],
+      }),
     ],
   },
 ];
