@@ -1,6 +1,6 @@
 # Vue Click Away
 
-Vue 3.0 Compatible Click Away Directive
+> Vue 3.0 Compatible Click Away Directive
 
 [![npm version](https://img.shields.io/npm/v/vue3-click-away.svg)](https://www.npmjs.com/package/vue3-click-away)
 
@@ -15,7 +15,7 @@ Detect if a click event happened outside of an element. Compatible with Vue 3.x.
 ## Installation
 
 ```
-npm i vue3-click-away
+npm i -s vue3-click-away
 ```
 
 <p></p>
