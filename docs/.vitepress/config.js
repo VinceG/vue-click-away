@@ -7,8 +7,6 @@ module.exports = {
   markdown: {
     lineNumbers: true,
   },
-  prefetch: false,
-  shouldPrefetch: () => false,
   head: [
     [
       "link",
