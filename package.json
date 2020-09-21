@@ -2,7 +2,8 @@
   "name": "vue3-click-away",
   "version": "0.1.0",
   "description": "Vue 3.0 Compatible Click Away Directive",
-  "main": "dist/clickaway.common.js",
+  "main": "dist/common.js",
+  "module": "dist/module.js",
   "scripts": {
     "build": "rollup -c"
   },
@@ -34,6 +35,7 @@
   "devDependencies": {
     "rollup": "^2.27.1",
     "rollup-plugin-terser": "^7.0.2",
-    "vitepress": "^0.6.0"
+    "vitepress": "^0.6.0",
+    "vue3-click-away": "^0.1.0"
   }
 }

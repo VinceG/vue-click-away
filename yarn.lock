@@ -2219,6 +2219,11 @@ vitepress@^0.6.0:
     vite "^1.0.0-rc.4"
     vue "^3.0.0-rc.11"
 
+vue3-click-away@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/vue3-click-away/-/vue3-click-away-0.1.0.tgz#b37ea0bd39b40f3ad851f92e8d47da76d784a4de"
+  integrity sha512-Y4nBinbyK8B1/FiTkFpLA+QS4/WvMzIQioNyIsdxL84hb374yFcPEtbkAJJIeU9zj3JX+jvQ70i3Q8M6AZgAZA==
+
 vue@^3.0.0-rc.11, vue@^3.0.0-rc.5:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.0.tgz#cfb5df5c34efce319b113a1667d12b74dcfd9c90"

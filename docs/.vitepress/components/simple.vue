@@ -6,6 +6,7 @@
 
 <script>
 import { ref, computed } from "vue";
+import VueClickAway from "vue3-click-away";
 export default {
   setup() {
     const outside = ref(false);
