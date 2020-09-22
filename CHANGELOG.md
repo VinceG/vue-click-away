@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2020-09-21
+### Updated
+- Readme
+- Changelog
+
+## [1.0.1] - 2020-09-21
+### Updated
+- Readme
+
 ## [1.0.0] - 2020-09-21
 ### Updated
 - Initial Release

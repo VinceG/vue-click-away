@@ -88,9 +88,9 @@ export default {
 
 ## Demo
 
-Currently VitePress is having an issue building for production since Directives require SSR implementation and there is no way to override this or skip it (VuePress has ClientOnly component, VitePress doesn't (Yet)). 
+Currently VitePress is having an issue building for production since Directives require SSR implementation and there is no way to override this or skip it (VuePress has ClientOnly component, VitePress doesn't, Yet). 
 
-I've opened an issue and pending to see if there is a way to go around it [Issue](https://github.com/vuejs/vitepress/issues/92)
+I've opened an issue and pending to see if there is a way to go around it, [Click Here](https://github.com/vuejs/vitepress/issues/92) to view the issue reported.
 
 For the time being, to test this out clone the repository and run the following inside the `/docs` folder
 
