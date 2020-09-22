@@ -26,11 +26,11 @@
     "away",
     "clickoutside"
   ],
-  "author": {
-    "name": "Vincent Gabriel",
-    "url": "https://github.com/vinceg"
-  },
   "contributors": [
+    {
+      "name": "Vincent Gabriel",
+      "url": "https://github.com/vinceg"
+    },
     {
       "name": "Denis Karabaza",
       "url": "https://github.com/simplesmiler"
