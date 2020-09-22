@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2020-09-21
+### Added
+- Added .npmignore
+
 ## [1.0.2] - 2020-09-21
 ### Updated
 - Readme
@@ -32,3 +36,6 @@ All notable changes to this project will be documented in this file.
 [0.1.5]: https://github.com/vinceg/vue-click-away/releases/tag/v0.1.5
 [0.1.6]: https://github.com/vinceg/vue-click-away/releases/tag/v0.1.6
 [1.0.0]: https://github.com/vinceg/vue-click-away/releases/tag/v1.0.0
+[1.0.1]: https://github.com/vinceg/vue-click-away/releases/tag/v1.0.1
+[1.0.2]: https://github.com/vinceg/vue-click-away/releases/tag/v1.0.2
+[1.0.3]: https://github.com/vinceg/vue-click-away/releases/tag/v1.0.3
