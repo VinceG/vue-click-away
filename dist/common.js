@@ -3,27 +3,19 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 const clickEventType = document.ontouchstart !== null ? "click" : "touchstart";
-
 const UNIQUE_ID = "__vue_click_away__";
 
-const onMounted = (el, binding, vnode) => {
+const onMounted = function (el, binding, vnode) {
   onUnmounted(el);
-
   let vm = vnode.context;
   let callback = binding.value;
-
   let nextTick = false;
   setTimeout(function () {
     nextTick = true;
   }, 0);
 
-  el[UNIQUE_ID] = (event) => {
-    if (
-      (!el || !el.contains(event.target)) &&
-      callback &&
-      nextTick &&
-      typeof callback === "function"
-    ) {
+  el[UNIQUE_ID] = function (event) {
+    if ((!el || !el.contains(event.target)) && callback && nextTick && typeof callback === "function") {
       return callback.call(vm, event);
     }
   };
@@ -31,26 +23,28 @@ const onMounted = (el, binding, vnode) => {
   document.addEventListener(clickEventType, el[UNIQUE_ID], false);
 };
 
-const onUnmounted = (el) => {
+const onUnmounted = function (el) {
   document.removeEventListener(clickEventType, el[UNIQUE_ID], false);
   delete el[UNIQUE_ID];
 };
 
-const onUpdated = (el, binding) => {
+const onUpdated = function (el, binding) {
   if (binding.value === binding.oldValue) {
     return;
   }
+
   onMounted(el, binding);
 };
 
 const directive = {
   mounted: onMounted,
   updated: onUpdated,
-  unmounted: onUnmounted,
+  unmounted: onUnmounted
 };
-
 const mixin = {
-  directives: { ClickAway: directive },
+  directives: {
+    ClickAway: directive
+  }
 };
 
 exports.default = directive;

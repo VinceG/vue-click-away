@@ -40,7 +40,10 @@
   },
   "homepage": "https://github.com/VinceG/vue-click-away#readme",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-arrow-functions": "^7.10.4",
     "rollup": "^2.27.1",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-copy": "^3.3.0",
     "vitepress": "^0.6.0"
   },
