@@ -32,11 +32,11 @@ const onUnmounted = (el) => {
   delete el[UNIQUE_ID];
 };
 
-const onUpdated = (el, binding) => {
+const onUpdated = (el, binding, vnode) => {
   if (binding.value === binding.oldValue) {
     return;
   }
-  onMounted(el, binding);
+  onMounted(el, binding, vnode);
 };
 
 const directive = {

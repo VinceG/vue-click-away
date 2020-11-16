@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2020-11-16
+### Fixed
+- `onUpdated` does not get vnode as an argument
+
 ## [1.0.3] - 2020-09-21
 ### Added
 - Added .npmignore

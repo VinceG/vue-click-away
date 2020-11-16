@@ -24,12 +24,12 @@ const onUnmounted = function (el) {
   delete el[UNIQUE_ID];
 };
 
-const onUpdated = function (el, binding) {
+const onUpdated = function (el, binding, vnode) {
   if (binding.value === binding.oldValue) {
     return;
   }
 
-  onMounted(el, binding);
+  onMounted(el, binding, vnode);
 };
 
 const directive = {
