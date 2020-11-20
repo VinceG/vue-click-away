@@ -24,14 +24,32 @@ const onUnmounted = function (el) {
   delete el[UNIQUE_ID];
 };
 
-const onUpdated = function (el, binding) {
+const onUpdated = function (el, binding, vnode) {
   if (binding.value === binding.oldValue) {
     return;
   }
 
-  onMounted(el, binding);
+  onMounted(el, binding, vnode);
 };
 
+const plugin = {
+  install: function (app) {
+    app.directive('click-away', {
+      mounted(el, binding, vnode) {
+        onMounted(el, binding, vnode);
+      },
+
+      updated(el, binding, vnode) {
+        onUpdated(el, binding, vnode);
+      },
+
+      unmounted(el) {
+        onUnmounted(el);
+      }
+
+    });
+  }
+};
 const directive = {
   mounted: onMounted,
   updated: onUpdated,
@@ -43,6 +61,6 @@ const mixin = {
   }
 };
 
-export default directive;
-export { mixin };
+export default plugin;
+export { directive, mixin };
 //# sourceMappingURL=module.js.map

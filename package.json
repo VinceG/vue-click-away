@@ -4,6 +4,11 @@
   "description": "Vue 3.0 Compatible Click Away Directive",
   "main": "dist/common.js",
   "module": "dist/module.js",
+  "typings": "dist/types/index.d.ts",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c"
   },
