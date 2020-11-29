@@ -92,6 +92,32 @@ export default {
 </script>
 ```
 
+### Directive
+
+```html
+<template>
+  <div v-click-away="onClickAway">
+    ...
+  </div>
+</template>
+```
+
+<p></p>
+
+```js
+import { directive } from "vue3-click-away";
+export default {
+  directives: {
+    ClickAway: directive
+  },
+  methods: {
+    onClickAway(event) {
+      console.log(event);
+    }
+  }
+}
+```
+
 ### Mixin
 
 ```html

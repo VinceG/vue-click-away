@@ -41,17 +41,7 @@ const onUpdated = (el, binding, vnode) => {
 
 const plugin = {
   install: (app) => {
-    app.directive('click-away', {
-      mounted(el, binding, vnode) {
-        onMounted(el, binding, vnode);
-      },
-      updated(el, binding, vnode) {
-        onUpdated(el, binding, vnode)
-      },
-      unmounted(el) {
-        onUnmounted(el)
-      }
-    })
+    app.directive('click-away', directive)
   }
 }
 
