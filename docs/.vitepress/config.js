@@ -5,7 +5,7 @@ module.exports = {
   description: "Vue 3.0 Compatible Click Away Directive",
   dest: "./dist/docs",
   markdown: {
-    lineNumbers: true,
+    lineNumbers: true
   },
   head: [
     [
@@ -24,6 +24,6 @@ module.exports = {
     lastUpdated: "Last Updated",
     smoothScroll: true,
     nav: [],
-    sidebar: "auto",
+    sidebar: 'auto'
   },
 };
