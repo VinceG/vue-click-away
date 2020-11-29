@@ -36,30 +36,60 @@ yarn add vue3-click-away
 
 ## Usage
 
-> By default the module exports a directive, you can also use this as a mixin which is documented below.
+> By default the module exports a plugin, but you can also use this as a mixin which is documented below or as a directive.
 
-```html
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import VueClickAway from "vue3-click-away";
+
+const app = createApp(App);
+
+app.use(VueClickAway) // Makes 'v-click-away' directive usable in every component
+app.mount('#app')
+```
+
+<p></p>
+
+With Options API
+```vue
 <template>
   <div v-click-away="onClickAway">
     ...
   </div>
 </template>
-```
 
-<p></p>
-
-```js
-import VueClickAway from "vue3-click-away";
+<script>
 export default {
-  directives: {
-    ClickAway: VueClickAway,
-  },
   methods: {
     onClickAway(event) {
-      console.log(event);
+      console.log(event)
     }
   }
 }
+</script>
+```
+
+or with Vue Composition API & Typescript
+
+```vue
+<template>
+  <div v-click-away="onClickAway">
+    ...
+  </div>
+</template>
+
+<script>
+export default {
+  setup() {
+    const onClickAway = (event) => {
+      console.log(event)
+    }
+
+    return { onClickAway }
+  } 
+}
+</script>
 ```
 
 ### Mixin
