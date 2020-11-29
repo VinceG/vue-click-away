@@ -24,7 +24,10 @@ export default [
         plugins: ['@babel/plugin-transform-arrow-functions']
       }),
       copy({
-        targets: [{ src: "dist/module.js", dest: "docs/.vitepress" }],
+        targets: [
+          { src: "types/*", dest: "dist/types" },
+          { src: "dist/module.js", dest: "docs/.vitepress" },
+        ],
       }),
     ],
   },
