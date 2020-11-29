@@ -36,6 +36,11 @@ const onUpdated = function (el, binding, vnode) {
   onMounted(el, binding, vnode);
 };
 
+const plugin = {
+  install: function (app) {
+    app.directive('click-away', directive);
+  }
+};
 const directive = {
   mounted: onMounted,
   updated: onUpdated,
@@ -47,6 +52,7 @@ const mixin = {
   }
 };
 
-exports.default = directive;
+exports.default = plugin;
+exports.directive = directive;
 exports.mixin = mixin;
 //# sourceMappingURL=common.js.map

@@ -36,7 +36,7 @@
 
 <script>
 import { ref, computed } from "vue";
-import VueClickAway from "../module.js";
+import { directive as VueClickAway } from "../module.js";
 export default {
   setup() {
     const open = ref(false);

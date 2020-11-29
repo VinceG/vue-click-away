@@ -39,14 +39,25 @@ const onUpdated = (el, binding, vnode) => {
   onMounted(el, binding, vnode);
 };
 
+const plugin = {
+  install: (app) => {
+    app.directive('click-away', directive)
+  }
+}
+
 const directive = {
   mounted: onMounted,
   updated: onUpdated,
   unmounted: onUnmounted,
 };
 
-export default directive;
-
-export const mixin = {
+const mixin = {
   directives: { ClickAway: directive },
 };
+
+export {
+  directive,
+  mixin
+}
+
+export default plugin;
