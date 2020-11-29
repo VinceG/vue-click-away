@@ -1,6 +1,6 @@
 {
   "name": "vue3-click-away",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Vue 3.0 Compatible Click Away Directive",
   "main": "dist/common.js",
   "module": "dist/module.js",
