@@ -2,7 +2,10 @@
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-const clickEventType = document.ontouchstart !== null ? "click" : "touchstart";
+const clickEventType = function () {
+  return document.ontouchstart !== null ? "click" : "touchstart";
+};
+
 const UNIQUE_ID = "__vue_click_away__";
 
 const onMounted = function (el, binding, vnode) {
@@ -20,11 +23,11 @@ const onMounted = function (el, binding, vnode) {
     }
   };
 
-  document.addEventListener(clickEventType, el[UNIQUE_ID], false);
+  document.addEventListener(clickEventType(), el[UNIQUE_ID], false);
 };
 
 const onUnmounted = function (el) {
-  document.removeEventListener(clickEventType, el[UNIQUE_ID], false);
+  document.removeEventListener(clickEventType(), el[UNIQUE_ID], false);
   delete el[UNIQUE_ID];
 };
 
