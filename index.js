@@ -26,11 +26,11 @@ const onMounted = (el, binding, vnode) => {
     }
   };
 
-  document.addEventListener(clickEventType(), el[UNIQUE_ID], false);
+  document.addEventListener(clickEventType(), el[UNIQUE_ID], true);
 };
 
 const onUnmounted = (el) => {
-  document.removeEventListener(clickEventType(), el[UNIQUE_ID], false);
+  document.removeEventListener(clickEventType(), el[UNIQUE_ID], true);
   delete el[UNIQUE_ID];
 };
 
